@@ -1,6 +1,4 @@
 package com.artemBuzEd.eShop.controllers;
-
-import com.artemBuzEd.eShop.data.Settlement;
 import com.artemBuzEd.eShop.data.SettlementRepository;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
