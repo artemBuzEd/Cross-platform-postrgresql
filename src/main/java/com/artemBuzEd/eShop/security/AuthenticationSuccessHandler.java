@@ -13,8 +13,10 @@ public class AuthenticationSuccessHandler extends SavedRequestAwareAuthenticatio
     public void onAuthenticationSuccess(HttpServletRequest request,
                                         HttpServletResponse response,
                                         Authentication authentication) throws IOException, ServletException {
+
+        request.getSession(false).removeAttribute("SPRING_SECURITY_SAVED_REQUEST");
         boolean authenticated = authentication.getAuthorities().stream()
-                .anyMatch(g -> g.getAuthority().equals("ROLE_USER"));
+                .anyMatch(g -> g.getAuthority().equals("ROLE_ADMIN"));
 
         if (authenticated) {
             setDefaultTargetUrl("/settlements");

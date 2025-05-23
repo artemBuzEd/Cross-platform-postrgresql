@@ -1,5 +1,6 @@
 package com.artemBuzEd.eShop.data.user;
 
+import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -15,6 +16,16 @@ public class HotelUserDetailsService implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        return null;
+        var hotelUser = hotelUserRepository.findByUsername(username);
+        if(hotelUser.isPresent()) {
+            var user = hotelUser.get();
+            return User.builder().username(user.getUsername())
+                    .password(user.getUser_password())
+                    .roles(user.getUser_role())
+                    .build();
+        }
+        else {
+            throw new UsernameNotFoundException(username);
+        }
     }
 }

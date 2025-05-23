@@ -46,7 +46,7 @@
                     <a class="inline-block py-2 px-4 text-gray-700 hover:text-blue-600 no-underline" href="#testimonials">Testimonials</a>
                 </li>
                 <li>
-                    <a class="inline-block py-2 px-4 bg-blue-500 hover:bg-blue-700 text-white font-bold rounded-lg" href="#">Book Now</a>
+                    <a class="inline-block py-2 px-4 bg-blue-500 hover:bg-blue-700 text-white font-bold rounded-lg" href="/creatingClient">Book Now</a>
                 </li>
             </ul>
         </div>
@@ -84,7 +84,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <!-- Room 1 -->
             <div class="bg-white rounded-lg shadow-xl overflow-hidden transform hover:scale-105 transition-transform duration-300">
-                <img src="static/deluxe-room.jpg" alt="Deluxe Room" class="w-full h-64 object-cover">
+                <img src="images/deluxe-room.jpg" alt="Deluxe Room" class="w-full h-64 object-cover">
                 <div class="p-6">
                     <h3 class="font-bold text-xl mb-2 text-gray-800">Deluxe Room</h3>
                     <p class="text-gray-700 text-base mb-4">Spacious and elegantly furnished, perfect for a relaxing stay.</p>
@@ -93,7 +93,7 @@
             </div>
             <!-- Room 2 -->
             <div class="bg-white rounded-lg shadow-xl overflow-hidden transform hover:scale-105 transition-transform duration-300">
-                <img src="static/executive-room.webp" alt="Executive Suite" class="w-full h-64 object-cover">
+                <img src="images/executive-room.webp" alt="Executive Suite" class="w-full h-64 object-cover">
                 <div class="p-6">
                     <h3 class="font-bold text-xl mb-2 text-gray-800">Executive Suite</h3>
                     <p class="text-gray-700 text-base mb-4">Experience ultimate luxury with a separate living area and premium amenities.</p>
@@ -102,7 +102,7 @@
             </div>
             <!-- Room 3 -->
             <div class="bg-white rounded-lg shadow-xl overflow-hidden transform hover:scale-105 transition-transform duration-300">
-                <img src="family-room.jpg" alt="Family Room" class="w-full h-64 object-cover">
+                <img src="images/family-room.jpg" alt="Family Room" class="w-full h-64 object-cover">
                 <div class="p-6">
                     <h3 class="font-bold text-xl mb-2 text-gray-800">Family Room</h3>
                     <p class="text-gray-700 text-base mb-4">Comfortable and spacious, ideal for families traveling together.</p>
@@ -117,28 +117,28 @@
         <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Glimpses of The Grand Horizon</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             <div class="overflow-hidden rounded-lg shadow-lg">
-                <img src="https://via.placeholder.com/600x400?text=Hotel+Lobby" alt="Hotel Lobby" class="gallery-img w-full transform hover:scale-110 transition-transform duration-300">
+                <img src="images/hotel_lobby.jpg" alt="Hotel Lobby" class="gallery-img w-full transform hover:scale-110 transition-transform duration-300">
             </div>
             <div class="overflow-hidden rounded-lg shadow-lg">
-                <img src="https://via.placeholder.com/600x400?text=Restaurant" alt="Hotel Restaurant" class="gallery-img w-full transform hover:scale-110 transition-transform duration-300">
+                <img src="images/hotel_restaurant.jpg" alt="Hotel Restaurant" class="gallery-img w-full transform hover:scale-110 transition-transform duration-300">
             </div>
             <div class="overflow-hidden rounded-lg shadow-lg">
-                <img src="https://via.placeholder.com/600x400?text=Swimming+Pool" alt="Swimming Pool" class="gallery-img w-full transform hover:scale-110 transition-transform duration-300">
+                <img src="images/hotel_swimming_pool.jpg" alt="Swimming Pool" class="gallery-img w-full transform hover:scale-110 transition-transform duration-300">
             </div>
             <div class="overflow-hidden rounded-lg shadow-lg">
-                <img src="https://via.placeholder.com/600x400?text=Gym+Area" alt="Gym Area" class="gallery-img w-full transform hover:scale-110 transition-transform duration-300">
+                <img src="images/hotel_gym.jpg" alt="Gym Area" class="gallery-img w-full transform hover:scale-110 transition-transform duration-300">
             </div>
             <div class="overflow-hidden rounded-lg shadow-lg">
-                <img src="https://via.placeholder.com/600x400?text=Guest+Room+View" alt="Guest Room View" class="gallery-img w-full transform hover:scale-110 transition-transform duration-300">
+                <img src="images/hotel_guest_view.jpg" alt="Guest Room View" class="gallery-img w-full transform hover:scale-110 transition-transform duration-300">
             </div>
             <div class="overflow-hidden rounded-lg shadow-lg">
-                <img src="https://via.placeholder.com/600x400?text=Conference+Hall" alt="Conference Hall" class="gallery-img w-full transform hover:scale-110 transition-transform duration-300">
+                <img src="images/hotel_conference_hall.jpg" alt="Conference Hall" class="gallery-img w-full transform hover:scale-110 transition-transform duration-300">
             </div>
             <div class="overflow-hidden rounded-lg shadow-lg">
-                <img src="https://via.placeholder.com/600x400?text=Spa+Retreat" alt="Spa Retreat" class="gallery-img w-full transform hover:scale-110 transition-transform duration-300">
+                <img src="images/hotel_spa_retreat.jpg" alt="Spa Retreat" class="gallery-img w-full transform hover:scale-110 transition-transform duration-300">
             </div>
             <div class="overflow-hidden rounded-lg shadow-lg">
-                <img src="https://via.placeholder.com/600x400?text=Rooftop+Bar" alt="Rooftop Bar" class="gallery-img w-full transform hover:scale-110 transition-transform duration-300">
+                <img src="images/hotel_toproof_bar.jpg" alt="Rooftop Bar" class="gallery-img w-full transform hover:scale-110 transition-transform duration-300">
             </div>
         </div>
     </section>
@@ -150,7 +150,7 @@
             <!-- Testimonial 1 -->
             <div class="bg-gray-50 p-6 rounded-lg shadow-md border border-gray-200">
                 <div class="flex items-center mb-4">
-                    <img src="https://via.placeholder.com/50x50?text=JS" alt="Jane Smith" class="w-12 h-12 rounded-full mr-4">
+                    <img src="/images/hotel_gym.jpg" alt="Jane Smith" class="w-12 h-12 rounded-full mr-4">
                     <div>
                         <p class="font-semibold text-gray-900">Jane S.</p>
                         <p class="text-sm text-yellow-500">★★★★★</p>
@@ -161,7 +161,7 @@
             <!-- Testimonial 2 -->
             <div class="bg-gray-50 p-6 rounded-lg shadow-md border border-gray-200">
                 <div class="flex items-center mb-4">
-                    <img src="https://via.placeholder.com/50x50?text=MD" alt="Mark Doe" class="w-12 h-12 rounded-full mr-4">
+                    <img src="/images/hotel_gym.jpg" alt="Mark Doe" class="w-12 h-12 rounded-full mr-4">
                     <div>
                         <p class="font-semibold text-gray-900">Mark D.</p>
                         <p class="text-sm text-yellow-500">★★★★☆</p>
@@ -172,7 +172,7 @@
             <!-- Testimonial 3 -->
             <div class="bg-gray-50 p-6 rounded-lg shadow-md border border-gray-200">
                 <div class="flex items-center mb-4">
-                    <img src="https://via.placeholder.com/50x50?text=AL" alt="Alice L." class="w-12 h-12 rounded-full mr-4">
+                    <img src="/images/hotel_gym.jpg" alt="Alice L." class="w-12 h-12 rounded-full mr-4">
                     <div>
                         <p class="font-semibold text-gray-900">Alice L.</p>
                         <p class="text-sm text-yellow-500">★★★★★</p>
@@ -183,7 +183,7 @@
             <!-- Testimonial 4 -->
             <div class="bg-gray-50 p-6 rounded-lg shadow-md border border-gray-200">
                 <div class="flex items-center mb-4">
-                    <img src="https://via.placeholder.com/50x50?text=RW" alt="Robert W." class="w-12 h-12 rounded-full mr-4">
+                    <img src="/images/hotel_gym.jpg" alt="Robert W." class="w-12 h-12 rounded-full mr-4">
                     <div>
                         <p class="font-semibold text-gray-900">Robert W.</p>
                         <p class="text-sm text-yellow-500">★★★★★</p>
@@ -194,7 +194,7 @@
             <!-- Testimonial 5 -->
             <div class="bg-gray-50 p-6 rounded-lg shadow-md border border-gray-200">
                 <div class="flex items-center mb-4">
-                    <img src="https://via.placeholder.com/50x50?text=SK" alt="Sarah K." class="w-12 h-12 rounded-full mr-4">
+                    <img src="/images/hotel_gym.jpg" alt="Sarah K." class="w-12 h-12 rounded-full mr-4">
                     <div>
                         <p class="font-semibold text-gray-900">Sarah K.</p>
                         <p class="text-sm text-yellow-500">★★★★☆</p>
@@ -205,7 +205,7 @@
             <!-- Testimonial 6 -->
             <div class="bg-gray-50 p-6 rounded-lg shadow-md border border-gray-200">
                 <div class="flex items-center mb-4">
-                    <img src="https://via.placeholder.com/50x50?text=TP" alt="Tom P." class="w-12 h-12 rounded-full mr-4">
+                    <img src="/images/hotel_gym.jpg" alt="Tom P." class="w-12 h-12 rounded-full mr-4">
                     <div>
                         <p class="font-semibold text-gray-900">Tom P.</p>
                         <p class="text-sm text-yellow-500">★★★★★</p>
