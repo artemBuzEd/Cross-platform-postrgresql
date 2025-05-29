@@ -27,5 +27,6 @@ public class Client {
     @Column(name = "passportdata")
     private String passportData;
 
+    @Column(name = "comment")
     private String comment;
 }

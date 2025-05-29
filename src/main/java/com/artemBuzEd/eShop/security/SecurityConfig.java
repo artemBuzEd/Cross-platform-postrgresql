@@ -37,7 +37,7 @@ public class SecurityConfig {
                 .authorizeHttpRequests(authorizeRequests ->{
                     authorizeRequests
                             .requestMatchers( "/signup", "/", "/login").permitAll()
-                            .requestMatchers( "/settlements").hasRole(Role.ADMIN.toString())
+                            .requestMatchers( "/settlements", "/clients/list", "/adminDashboard", "/clients/edit").hasRole(Role.ADMIN.toString())
                             .requestMatchers( "/home", "/booking", "/home/creationClient", "/creatingClient").hasRole(Role.USER.toString())
                             .requestMatchers(PathRequest.toStaticResources().atCommonLocations()).permitAll()
                             .anyRequest().authenticated();

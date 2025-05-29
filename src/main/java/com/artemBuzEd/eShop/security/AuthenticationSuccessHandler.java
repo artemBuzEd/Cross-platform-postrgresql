@@ -19,7 +19,7 @@ public class AuthenticationSuccessHandler extends SavedRequestAwareAuthenticatio
                 .anyMatch(g -> g.getAuthority().equals("ROLE_ADMIN"));
 
         if (authenticated) {
-            setDefaultTargetUrl("/settlements");
+            setDefaultTargetUrl("/adminDashboard");
         } else{
             setDefaultTargetUrl("/home");
         }

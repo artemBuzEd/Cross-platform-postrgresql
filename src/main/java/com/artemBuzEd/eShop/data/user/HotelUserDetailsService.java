@@ -1,5 +1,6 @@
 package com.artemBuzEd.eShop.data.user;
 
+import com.artemBuzEd.eShop.repository.HotelUserRepository;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

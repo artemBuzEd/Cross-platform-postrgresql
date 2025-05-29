@@ -1,6 +1,5 @@
 package com.artemBuzEd.eShop.controllers;
 
-import com.artemBuzEd.eShop.data.post.ClientRepository;
 import com.artemBuzEd.eShop.data.post.ClientRequest;
 import com.artemBuzEd.eShop.data.post.ClientServices;
 import org.springframework.stereotype.Controller;

@@ -1,4 +1,4 @@
-package com.artemBuzEd.eShop.data.post;
+package com.artemBuzEd.eShop.repository;
 
 import com.artemBuzEd.eShop.data.Client;
 import org.springframework.data.repository.CrudRepository;

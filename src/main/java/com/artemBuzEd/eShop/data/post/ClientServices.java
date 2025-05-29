@@ -1,15 +1,12 @@
 package com.artemBuzEd.eShop.data.post;
 
 import com.artemBuzEd.eShop.data.Client;
-import com.artemBuzEd.eShop.data.user.HotelUser;
-import com.artemBuzEd.eShop.data.user.HotelUserRepository;
-import com.artemBuzEd.eShop.security.AuthenticationUserInfo;
+import com.artemBuzEd.eShop.repository.ClientRepository;
+import com.artemBuzEd.eShop.repository.HotelUserRepository;
 import com.artemBuzEd.eShop.security.AuthenticationUserInfoFacade;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
-
-import java.lang.ref.Cleaner;
 
 @Service
 public class ClientServices {
@@ -39,6 +36,28 @@ public class ClientServices {
             return savedClient;
         } else {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, "User not found");
+        }
+    }
+
+    public Client editClient(EditClientRequest editClientRequest) {
+        var oldClient = clientRepository.findById(editClientRequest.clientId());
+        if(oldClient.isPresent()) {
+            var client = oldClient.get();
+            client.setName(editClientRequest.name());
+            client.setSurname(editClientRequest.surname());
+            client.setPassportData(editClientRequest.passportData());
+            client.setComment(editClientRequest.comment());
+            return clientRepository.save(client);
+        } else{
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Client not found");
+        }
+    }
+
+    public Client checkAndGetClientFromRepository(Long id) {
+        if(clientRepository.findById(id).isPresent()) {
+            return clientRepository.findById(id).get();
+        } else {
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Client not found");
         }
     }
 }

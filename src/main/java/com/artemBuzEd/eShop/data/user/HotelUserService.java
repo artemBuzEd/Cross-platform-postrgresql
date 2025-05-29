@@ -1,10 +1,9 @@
 package com.artemBuzEd.eShop.data.user;
 
 import com.artemBuzEd.eShop.data.Client;
-import com.artemBuzEd.eShop.security.AuthenticationUserInfo;
+import com.artemBuzEd.eShop.repository.HotelUserRepository;
 import com.artemBuzEd.eShop.security.AuthenticationUserInfoFacade;
 import com.artemBuzEd.eShop.security.Role;
-import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
