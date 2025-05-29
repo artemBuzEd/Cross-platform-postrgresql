@@ -1,3 +1,5 @@
+@param String successMessage
+@param String errorMessage
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,7 +21,6 @@
     </style>
 </head>
 <body class="bg-gray-100 font-sans leading-normal tracking-normal">
-
 <!-- Navigation Bar -->
 <nav class="bg-white shadow-lg fixed w-full z-10 top-0">
     <div class="container mx-auto flex flex-wrap items-center justify-between p-4">
@@ -46,7 +47,7 @@
                     <a class="inline-block py-2 px-4 text-gray-700 hover:text-blue-600 no-underline" href="#testimonials">Testimonials</a>
                 </li>
                 <li>
-                    <a class="inline-block py-2 px-4 bg-blue-500 hover:bg-blue-700 text-white font-bold rounded-lg" href="/creatingClient">Book Now</a>
+                    <a class="inline-block py-2 px-4 bg-blue-500 hover:bg-blue-700 text-white font-bold rounded-lg" href="/booking">Book Now</a>
                 </li>
             </ul>
         </div>
@@ -65,7 +66,9 @@
         </div>
     </div>
 </header>
-
+<div id="toast" class="hidden fixed top-4 right-4 px-4 py-2 rounded-md shadow-lg transition-opacity duration-300 opacity-0">
+    <span id="toastMessage"></span>
+</div>
 <!-- Main Content -->
 <main class="container mx-auto px-4 py-16">
 
@@ -233,12 +236,32 @@
     </div>
 </footer>
 
+<!-- Toast Notification -->
+<script>
+    // Show toast notification
+    function showToast(message, type) {
+        const toast = document.getElementById('toast');
+        const toastMessage = document.getElementById('toastMessage');
+
+        // Set message and style based on type
+        toastMessage.textContent = message;
+        toast.classList.remove('bg-blue-600', 'bg-red-600', 'hidden', 'opacity-0');
+        toast.classList.add(type === 'success' ? 'bg-blue-600' : 'bg-red-600', 'text-white', 'opacity-100');
+
+        // Auto-hide after 3 seconds
+        setTimeout(() => {
+            toast.classList.remove('opacity-100');
+            toast.classList.add('opacity-0');
+            setTimeout(() => toast.classList.add('hidden'), 300); // Match transition duration
+        }, 3000);
+    }
+</script>
+</body>
+
 <!-- Simple Nav Toggle Script -->
 <script>
     document.getElementById('nav-toggle').onclick = function(){
         document.getElementById("nav-content").classList.toggle("hidden");
     }
 </script>
-
-</body>
 </html>

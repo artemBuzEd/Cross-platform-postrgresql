@@ -38,7 +38,7 @@ public class SecurityConfig {
                     authorizeRequests
                             .requestMatchers( "/signup", "/", "/login").permitAll()
                             .requestMatchers( "/settlements").hasRole(Role.ADMIN.toString())
-                            .requestMatchers( "/home").hasRole(Role.USER.toString())
+                            .requestMatchers( "/home", "/booking", "/home/creationClient", "/creatingClient").hasRole(Role.USER.toString())
                             .requestMatchers(PathRequest.toStaticResources().atCommonLocations()).permitAll()
                             .anyRequest().authenticated();
                 }).formLogin(httpSecurityFormLoginConfigurer -> {

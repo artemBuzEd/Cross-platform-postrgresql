@@ -15,7 +15,7 @@ import lombok.ToString;
 public class Client {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long client_id;
 
     @Column(name = "name")

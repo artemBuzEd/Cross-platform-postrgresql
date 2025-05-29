@@ -1,3 +1,6 @@
+@param String successMessage = null
+@param String errorMessage = null
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +10,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-50">
+
 <!-- Header -->
 <header class="bg-blue-600 text-white shadow-md">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
@@ -25,7 +29,7 @@
 <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
     <div class="bg-white p-6 rounded-lg shadow-md">
         <h2 class="text-2xl font-bold mb-6 text-gray-800">Create New Client</h2>
-        <form id="clientCreateForm" action="/client/create" method="post">
+        <form id="clientCreateForm" action="/home/creationClient" method="post">
             <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
                 <div>
                     <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
@@ -41,7 +45,7 @@
                 </div>
                 <div class="sm:col-span-2">
                     <label for="passport" class="block text-sm font-medium text-gray-700">Passport Data</label>
-                    <input type="text" id="passport" name="passport" required
+                    <input type="text" id="passport" name="passportData" required
                            class="mt-1 w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
                            placeholder="Enter passport number">
                 </div>

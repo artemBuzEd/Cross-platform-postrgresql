@@ -1,5 +1,6 @@
 package com.artemBuzEd.eShop.data.user;
 
+import com.artemBuzEd.eShop.data.Client;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -19,4 +20,8 @@ public class HotelUser {
     private String user_password;
 
     private String user_role;
+
+    @OneToOne
+    @JoinColumn(name = "client_id")
+    private Client client;
 }
