@@ -2,6 +2,7 @@
 @import java.util.List
 
 @param List<Client> clients
+@param String nextDirection
 
 <!DOCTYPE html>
 <html lang="en">
@@ -14,6 +15,12 @@
 <body class="bg-gray-100 font-sans">
 <div class="container mx-auto p-6">
     <h1 class="text-3xl font-bold mb-6 text-center">Hotel Clients</h1>
+    <div class="mb-4 text-right">
+        <a href="/clients/list?direction=${nextDirection}"
+           class="inline-block bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700">
+            Sort by ID: ${nextDirection == "asc" ? "Ascending" : "Descending"}
+        </a>
+    </div>
     <div class="bg-white shadow-md rounded-lg overflow-hidden">
         <table class="min-w-full divide-y divide-gray-200">
             <thead class="bg-gray-50">

@@ -1,12 +1,18 @@
 package com.artemBuzEd.eShop.controllers;
 
+import com.artemBuzEd.eShop.data.Client;
 import com.artemBuzEd.eShop.data.post.ClientServices;
 import com.artemBuzEd.eShop.data.post.DeleteClientRequest;
 import com.artemBuzEd.eShop.data.post.EditClientRequest;
 import com.artemBuzEd.eShop.repository.ClientRepository;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 @Controller
 public class ClientListController {
@@ -19,8 +25,14 @@ public class ClientListController {
     }
 
     @GetMapping("/clients/list")
-    public String clientsList(Model model) {
-        model.addAttribute("clients", clientRepository.findAll());
+    public String clientsList(Model model, @RequestParam(name = "direction", defaultValue = "desc") String direction)  {
+        if (direction.equalsIgnoreCase("asc")) {
+            model.addAttribute("clients", clientRepository.findAllClientsOrderByClientIdAsc());
+            model.addAttribute("nextDirection", "desc");
+        } else {
+            model.addAttribute("clients", clientRepository.findAllClientsOrderByClientIdDesc());
+            model.addAttribute("nextDirection", "asc");
+        }
         return "clients";
     }
 
