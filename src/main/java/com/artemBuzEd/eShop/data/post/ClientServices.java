@@ -60,4 +60,8 @@ public class ClientServices {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Client not found");
         }
     }
+
+    public void deleteClientFromRepository(DeleteClientRequest deleteClientRequest) {
+        clientRepository.deleteById(deleteClientRequest.clientId());
+    }
 }

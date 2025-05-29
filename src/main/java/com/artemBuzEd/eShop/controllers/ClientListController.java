@@ -1,9 +1,9 @@
 package com.artemBuzEd.eShop.controllers;
 
 import com.artemBuzEd.eShop.data.post.ClientServices;
+import com.artemBuzEd.eShop.data.post.DeleteClientRequest;
 import com.artemBuzEd.eShop.data.post.EditClientRequest;
 import com.artemBuzEd.eShop.repository.ClientRepository;
-import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -29,10 +29,17 @@ public class ClientListController {
         model.addAttribute("client", clientServices.checkAndGetClientFromRepository(id));
         return "editClient";
     }
+
     @PostMapping("/clients/edit")
     public String editClient(@ModelAttribute EditClientRequest editClientRequest, Model model) {
         model.addAttribute("client", clientRepository.findById(editClientRequest.clientId()).get());
         clientServices.editClient(editClientRequest);
+        return "redirect:/clients/list";
+    }
+
+    @PostMapping("/clients/delete")
+    public String deleteClient(@ModelAttribute DeleteClientRequest deleteClientRequest) {
+        clientServices.deleteClientFromRepository(deleteClientRequest);
         return "redirect:/clients/list";
     }
 }
