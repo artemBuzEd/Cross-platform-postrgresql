@@ -3,6 +3,7 @@
 
 @param List<Client> clients
 @param String nextDirection
+@param String searchTerm = ""
 
 <!DOCTYPE html>
 <html lang="en">
@@ -22,6 +23,14 @@
         </a>
     </div>
     <div class="bg-white shadow-md rounded-lg overflow-hidden">
+        <div class="mb-4">
+            <form action="/clients/list/search" method="get" class="flex space-x-2">
+                <input type="text" name="searchTerm" value="${searchTerm}" placeholder="Search"
+                       class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring focus:border-blue-300">
+                <button type="submit"
+                        class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">Search</button>
+            </form>
+        </div>
         <table class="min-w-full divide-y divide-gray-200">
             <thead class="bg-gray-50">
             <tr>

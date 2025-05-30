@@ -25,7 +25,7 @@ public class ClientListController {
     }
 
     @GetMapping("/clients/list")
-    public String clientsList(Model model, @RequestParam(name = "direction", defaultValue = "desc") String direction)  {
+    public String clientsList(Model model, @RequestParam(name = "direction", defaultValue = "asc") String direction)  {
         if (direction.equalsIgnoreCase("asc")) {
             model.addAttribute("clients", clientRepository.findAllClientsOrderByClientIdAsc());
             model.addAttribute("nextDirection", "desc");
@@ -53,5 +53,13 @@ public class ClientListController {
     public String deleteClient(@ModelAttribute DeleteClientRequest deleteClientRequest) {
         clientServices.deleteClientFromRepository(deleteClientRequest);
         return "redirect:/clients/list";
+    }
+
+    @GetMapping("/clients/list/search")
+    public String searchClient(@RequestParam(name = "searchTerm") String searchTerm, Model model) {
+        List<Client> results = clientRepository.findClientBySearchTerm(searchTerm);
+        model.addAttribute("clients", results);
+        model.addAttribute("searchTerm", searchTerm);
+        return "clients";
     }
 }
